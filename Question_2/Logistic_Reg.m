@@ -120,6 +120,8 @@
 
  % Confusion Matrix
  confusion_matrix = [sum(yob==1 & yob == ytest) sum(yob==0 & yob ~= ytest); sum(yob==1 & yob ~= ytest) sum(yob==0 & yob == ytest);];
+ 
+ % Computing F1 Score
  TP = sum(yob==1 & yob == ytest);
  FP = sum(yob==1 & yob ~= ytest);
  FN = sum(yob==0 & yob ~= ytest);
