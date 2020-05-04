@@ -1,3 +1,4 @@
+% Function to compute cost and gradient 
 function [J, grad] = Costfunction(theta, X, y)
 
 m = length(y);
