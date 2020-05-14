@@ -35,11 +35,11 @@
  % Initialization 1
  theta1 = zeros(6,1);
  alpha = 0.01;
- [cost1, grad1] = Costfunction(theta1, Xnorm, y);  
+ [cost1, grad1] = CH5019_GRP28_Costfunction(theta1, Xnorm, y);  
  
  while(sqrt(sum(grad1.^2)) > 10^-6) 
   theta1 = theta1-alpha*grad1; 
-  [cost1, grad1] = Costfunction(theta1, Xnorm, y);
+  [cost1, grad1] = CH5019_GRP28_Costfunction(theta1, Xnorm, y);
   J1(itr1)=cost1;
   itr1 = itr1+1;
  end
@@ -52,11 +52,11 @@
  % Initialization 2
  theta2 = [-45;60;70;80;-60;80];
  alpha = 0.01;
- [cost2, grad2] = Costfunction(theta2, Xnorm, y); 
+ [cost2, grad2] = CH5019_GRP28_Costfunction(theta2, Xnorm, y); 
  
  while(sqrt(sum(grad2.^2)) > 10^-6) 
   theta2 = theta2-alpha*grad2; 
-  [cost2, grad2] = Costfunction(theta2, Xnorm, y);
+  [cost2, grad2] = CH5019_GRP28_Costfunction(theta2, Xnorm, y);
   J2(itr2)=cost2;
   itr2 = itr2+1;
  end
@@ -71,11 +71,11 @@
  % Initialization 3
  theta3 = [105;-150;-200;-250;150;-200];
  alpha = 0.01;
- [cost3, grad3] = Costfunction(theta3, Xnorm, y);  
+ [cost3, grad3] = CH5019_GRP28_Costfunction(theta3, Xnorm, y);  
  
  while(sqrt(sum(grad3.^2)) > 10^-6) 
   theta3 = theta3-alpha*grad3; 
-  [cost3, grad3] = Costfunction(theta3, Xnorm, y);
+  [cost3, grad3] = CH5019_GRP28_Costfunction(theta3, Xnorm, y);
   J3(itr3)=cost3;
   itr3 = itr3+1;
  end
@@ -90,11 +90,11 @@
  % Initialization 4
  theta4 = [-100;100;150;200;-100;80];
  alpha = 0.01;
- [cost4, grad4] = Costfunction(theta4, Xnorm, y);  
+ [cost4, grad4] = CH5019_GRP28_Costfunction(theta4, Xnorm, y);  
  
  while(sqrt(sum(grad4.^2)) > 10^-6) 
   theta4 = theta4-alpha*grad4; 
-  [cost4, grad4] = Costfunction(theta4, Xnorm, y);
+  [cost4, grad4] = CH5019_GRP28_Costfunction(theta4, Xnorm, y);
   J4(itr4)=cost4;
   itr4 = itr4+1;
  end
@@ -116,7 +116,7 @@
  Xtest3 = [Xtest2(:,1)./300 Xtest2(:,2)./49 Xtest2(:,3)./150 Xtest2(:,4)./2600 Xtest2(:,5)./0.4];
  Xtest3 = [ones(300,1) Xtest3];
  YU = Xtest3*theta;
- yob = (sigmoid(Xtest3*theta) >= 0.5);
+ yob = (CH5019_GRP28_sigmoid(Xtest3*theta) >= 0.5);
 
  % Confusion Matrix
  confusion_matrix = [sum(yob==1 & yob == ytest) sum(yob==0 & yob ~= ytest); sum(yob==1 & yob ~= ytest) sum(yob==0 & yob == ytest);];
