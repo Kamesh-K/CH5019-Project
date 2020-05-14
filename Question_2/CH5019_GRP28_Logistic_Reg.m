@@ -105,7 +105,7 @@
      besttheta = theta4;
  end
 
- % Verfying the obtained theta in the test set
+ % Verifying the obtained theta in the test set
  Xtest1 = Testdata(:,1:5);
  Xtest = table2array(Xtest1);
  ytest = table2array(Testdata(:,7));
