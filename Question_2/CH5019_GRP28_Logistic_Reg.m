@@ -1,5 +1,5 @@
  % Getting data from dataset 
- T = readtable('Dataset_Question2.xlsx');
+ T = readtable('CH5019_GRP28_Dataset_Question2.xlsx');
  
  % Assigning 1 for 'Pass' and 0 for 'Fail' 
  T.test1 = strcmp(T.Test,'Pass');
