@@ -1,9 +1,15 @@
-### Question 3
+## Question 3
 
-##### Approach for the Question 3:
+This folder comprises of codes and datasets used for Q3 of the Group projects.
+The libraries used for this question are:
+- pandas
+- seaborn
+- numpy
+- matplotlib
+- datetime
+- plotly
+- scipy
+- geopandas
+- statsmodels
 
-- COVID-19 Dataset from Kaggle - SRK dataset
-- Visualize the data to understand the data and answer the questions mentioned 
-- Add suitable columns to the dataset and filter to answer the questions
-- Plot on number of cases and try to fit a curve through the same 
-- To comment on the how successful the lockdown is we can fit a curve through the days before 21 days and compare it with the actual curve -- This maybe mislead as the data can be very small and the curve fitting may give a very wrong understanding. Any other suitable methods is welcomed! 
+Detailed description of the code is avalable under the documentation folder.
